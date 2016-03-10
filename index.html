@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Play dixit</title>
+
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+        <style>
+            @media (max-width: 900px) {
+                #mobile-alert {
+                    display: none;
+                }
+            }
+
+            @media (min-width: 900px) {
+                #desktop-alert {
+                    display: none;
+                }
+            }
+            #players {
+                font-size: 14pt;
+            }
+
+        </style>
+    </head>
+
+    <body>
+        <div class='row' id='mobile-alert'>
+            <h1 class='alert alert-danger text-center'>Dégainez votre smartphone !</h1>
+            <div class='text-center'><img src='https://chart.googleapis.com/chart?cht=qr&chs=250x250&chl=http%253A%252F%252Fjbpasquier.eu%252Fdixit&chld=H|0'/></div>
+            <h1 class='text-center'>
+                <a href='http://jbpasquier.eu/dixit'>http://jbpasquier.eu/dixit</a>
+            </h1>
+        </div>
+        <div class='container-fluid' id='desktop-alert'>
+            <div class='row'>
+                <div class='col-xs-12 text-center'>
+                    <h1>Dixit</h1>
+                </div>
+            </div>
+            <div id='noplayers'>
+                <div class='row'>
+                    <div class='col-xs-12'>
+                        <textarea id="players_submit" class='form-control' rows="8" placeholder="Joueurs séparés par un saut de ligne"></textarea>
+                        <button id="play" class='btn btn-lg btn-block btn-primary'>Let's drink</button>
+                    </div>
+                </div>
+            </div>
+            <div id='players' style='display:none;'></div>
+        </div>
+
+        <script src="./js/jquery.min.js"></script>
+        <script src="./js/bootstrap.min.js"></script>
+        <script src="./dixit.js"></script>
+    </body>
+
+</html>
